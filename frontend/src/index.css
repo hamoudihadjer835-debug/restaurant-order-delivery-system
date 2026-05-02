@@ -1,0 +1,61 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-beige font-sans text-gray-800;
+  }
+  * {
+    @apply box-border;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-primary hover:bg-primary-dark text-white font-semibold py-2.5 px-5 rounded-xl transition-all duration-200 flex items-center gap-2 justify-center;
+  }
+  .btn-secondary {
+    @apply bg-white border border-gray-200 hover:border-primary text-gray-700 hover:text-primary font-medium py-2.5 px-5 rounded-xl transition-all duration-200 flex items-center gap-2 justify-center;
+  }
+  .card {
+    @apply bg-white rounded-2xl shadow-sm border border-gray-100;
+  }
+  .input-field {
+    @apply w-full border border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/10 transition-all;
+  }
+  .badge {
+    @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-semibold;
+  }
+  .sidebar-link {
+    @apply flex items-center gap-3 px-4 py-3 rounded-xl text-sm font-medium transition-all duration-200 cursor-pointer;
+  }
+  .sidebar-link.active {
+    @apply bg-primary text-white;
+  }
+  .sidebar-link:not(.active) {
+    @apply text-gray-600 hover:bg-beige hover:text-primary;
+  }
+}
+
+/* Leaflet map fix */
+.leaflet-container {
+  height: 100%;
+  width: 100%;
+  border-radius: 12px;
+  z-index: 1;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: #f1f1f1; }
+::-webkit-scrollbar-thumb { background: #C8622A; border-radius: 3px; }
+
+/* Status colors */
+.status-pending       { @apply bg-yellow-100 text-yellow-800; }
+.status-confirmed     { @apply bg-blue-100 text-blue-800; }
+.status-preparing     { @apply bg-orange-100 text-orange-800; }
+.status-ready         { @apply bg-purple-100 text-purple-800; }
+.status-out_for_delivery { @apply bg-indigo-100 text-indigo-800; }
+.status-delivered     { @apply bg-green-100 text-green-800; }
+.status-cancelled     { @apply bg-red-100 text-red-800; }
