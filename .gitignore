@@ -1,0 +1,30 @@
+# ── Frontend ─────────────────────────────
+frontend/node_modules/
+frontend/dist/
+frontend/build/
+frontend/.env
+frontend/.env.local
+frontend/.env.production
+
+# ── Backend (Laravel) ────────────────────
+backend/vendor/
+backend/.env
+backend/public/storage/
+backend/storage/*.key
+backend/storage/pail/
+backend/bootstrap/cache/*.php
+backend/.phpunit.result.cache
+backend/public/build/
+backend/public/hot/
+
+# ── OS ───────────────────────────────────
+.DS_Store
+Thumbs.db
+
+# ── IDEs ─────────────────────────────────
+.vscode/
+.idea/
+
+# ── Logs ─────────────────────────────────
+*.log
+npm-debug.log*
